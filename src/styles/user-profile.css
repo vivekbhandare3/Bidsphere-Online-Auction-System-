@@ -1,0 +1,239 @@
+/* Enhanced Sky Blue Theme Variables */
+:root {
+  --sky-blue-primary: #4a90e2;
+  --sky-blue-light: #77adff;
+  --sky-blue-dark: #2a70c2;
+  --sky-blue-pale: #eaf2ff;
+  --sky-blue-accent: #c7e0ff;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --text-color: #333333;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+  --bg-light: #f8f9fa;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease;
+}
+
+/* General Page Styles */
+body.profile-page {
+  background: linear-gradient(to bottom, var(--sky-blue-pale), var(--bg-light));
+  color: var(--text-color);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw; /* Full viewport width */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container for Full Width */
+.container {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Set a max-width for better readability */
+  padding: 0 15px; /* Add some padding on sides for small screens */
+  margin: 0 auto;
+  flex-grow: 1;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Header */
+.profile-header {
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.profile-header h1 {
+  color: var(--sky-blue-dark);
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.profile-header .text-muted {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+/* Profile Card */
+.profile-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition);
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Header */
+.card-header {
+  background: linear-gradient(to right, #4a90e2, #77adff);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-bottom: none;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Table Styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: rgba(74, 144, 226, 0.1);
+  color: var(--sky-blue-dark);
+  font-weight: 600;
+  padding: 1rem;
+  border-bottom: 2px solid rgba(74, 144, 226, 0.2);
+}
+
+.table tbody tr {
+  transition: background-color var(--transition);
+}
+
+.table tbody tr:hover {
+  background-color: var(--sky-blue-pale);
+}
+
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-color: var(--border-color);
+}
+
+/* Buttons */
+.btn-outline-info {
+  color: var(--sky-blue-primary);
+  border: 1px solid var(--sky-blue-primary);
+  background-color: transparent;
+  transition: all var(--transition);
+}
+
+.btn-outline-info:hover {
+  background-color: var(--sky-blue-primary);
+  color: white;
+}
+
+.btn-outline-success {
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+  background-color: transparent;
+  transition: all var(--transition);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+}
+
+/* Badges */
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background: linear-gradient(to right, var(--sky-blue-primary), var(--sky-blue-light));
+  color: white;
+  border-bottom: none;
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 1.25rem 1.5rem;
+}
+
+/* Empty State */
+.text-center.py-3 {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+
+  .table thead th,
+  .table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .profile-header {
+    padding: 1.5rem 0.5rem 1rem;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .btn-sm {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profile-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .profile-header .text-muted {
+    font-size: 1rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

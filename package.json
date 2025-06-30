@@ -1,0 +1,53 @@
+{
+  "homepage": "https://janardan04.github.io/BidSphere-Auction",
+  "name": "BidSphere-Auction",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "barcode": "^0.1.0",
+    "bootstrap": "^5.3.5",
+    "cra-template": "1.2.0",
+    "firebase": "^11.6.0",
+    "js": "^0.1.0",
+    "jsbarcode": "^3.11.6",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-bootstrap-icons": "^1.11.5",
+    "react-dom": "^19.0.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-router-dom": "^7.5.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build && copy build\\index.html public\\404.html",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devServer": {
+    "historyApiFallback": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
